@@ -1,5 +1,8 @@
+setuptools==67.0.0
+pip==25.3
+wheel==0.38.4
 cython==0.29.34
-scikit-learn==1.0.2  # Versi stabil dari scikit-learn
+scikit-learn==1.0.2 --no-binary :all:
 flask==2.1.0
 flask-cors==3.0.10
 pymongo[srv]==4.6.1
