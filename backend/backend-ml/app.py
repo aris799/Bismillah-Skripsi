@@ -19,6 +19,9 @@ def get_mongodb_connection():
         database_name = os.getenv('MONGO_DATABASE')
         collection_name = os.getenv('MONGO_COLLECTION')
 
+        if not mongo_uri or not database_name or not collection_name:
+            raise ValueError("MongoDB environment variables not set")
+
         client = MongoClient(mongo_uri)
         db = client[database_name]
         collection = db[collection_name]
@@ -34,6 +37,13 @@ def get_mongodb_connection():
     except Exception as e:
         print(f"MongoDB Connection Error: {e}")
         return None
+
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        "message": "ML Backend is running",
+        "status": "OK"
+    })
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
@@ -117,4 +127,5 @@ def recommend():
         }), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
