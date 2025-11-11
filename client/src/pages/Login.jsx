@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Image from "../assets/image.png";
-import Logo from "../assets/logo.png";
-import GoogleSvg from "../assets/icons8-google.svg";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
 import "../styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import GoogleSvg from "../assets/icons8-google.svg"; // Tetap menggunakan GoogleSvg
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [ token, setToken ] = useState(JSON.parse(localStorage.getItem("auth")) || "");
+  const [token, setToken] = useState(JSON.parse(localStorage.getItem("auth")) || "");
   const navigate = useNavigate();
-
-
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
@@ -32,7 +28,7 @@ const Login = () => {
           formData
         );
         localStorage.setItem('auth', JSON.stringify(response.data.token));
-        toast.success("Login successfull");
+        toast.success("Login successful");
         navigate("/dashboard");
       } catch (err) {
         console.log(err);
@@ -44,7 +40,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if(token !== ""){
+    if (token !== "") {
       toast.success("You already logged in");
       navigate("/dashboard");
     }
@@ -53,13 +49,14 @@ const Login = () => {
   return (
     <div className="login-main">
       <div className="login-left">
-        <img src={Image} alt="" />
+        <img 
+          src="https://res.cloudinary.com/diogvlobw/image/upload/v1762062126/Logo_SRSIK_Vertical_da5k1s.png" 
+          alt="Logo SRSIK" 
+          className="login-image"
+        />
       </div>
       <div className="login-right">
         <div className="login-right-container">
-          <div className="login-logo">
-            <img src={Logo} alt="" />
-          </div>
           <div className="login-center">
             <h2>Welcome back!</h2>
             <p>Please enter your details</p>
@@ -93,16 +90,20 @@ const Login = () => {
                     Remember for 30 days
                   </label>
                 </div>
-                <a href="#" className="forgot-pass-link">
-                  Forgot password?
-                </a>
+                <Link to="/forgot-password" className="forgot-pass-link">  
+                  Forgot password?  
+                </Link>  
               </div>
               <div className="login-center-buttons">
                 <button type="submit">Log In</button>
-                <button type="submit">
-                  <img src={GoogleSvg} alt="" />
-                  Log In with Google
-                </button>
+              <button 
+                  type="submit" 
+                  disabled // Ini akan membuat tombol tidak bisa diklik
+                  className="google-login-button"
+              >
+                <img src={GoogleSvg} alt="" />
+                Log In with Google
+              </button>
               </div>
             </form>
           </div>

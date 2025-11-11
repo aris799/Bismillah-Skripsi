@@ -1,41 +1,603 @@
-.dashboard-main{
-    font-size: 30px;
-    height: 100vh;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.dashboard-main p{
+body {
+  font-family: Arial, sans-serif;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.home-main h1 {
+  font-size: 6rem;
+  font-weight: bolder;
+  color: #000;
+  text-align: center;
+  margin-bottom: -30px;
+}
+.home-main h2 {
   font-size: 20px;
-  padding: 0 20px
+  font-weight: bold;
+  text-align: center;
+  max-width: 800px;
+  color: #000000;
+  line-height: 1.6;
+  padding: 0 20px;
+  margin-bottom: 20px;
 }
 
-.logout-button{
-    background: black;
-    color: white;
-    border: 3px solid black;
-    transition: background 1s linear 0ms;
-    transition: color 500ms linear 0ms;
+.home-main p {
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  max-width: 1000px;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 20px;
+}
 
-    width: 500px;
-    padding: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    border-radius: 30px;
-    font-weight: 600;
-    margin-top: 10px;
+.explore-button {
+  width: 300px;
+  height: 60px;
+  font-weight: bold;
+  border: 3px solid #000;
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin-bottom: 30px;
+  text-transform: none;
+}
 
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
+.explore-button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.statistics-container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background-color: #fff;
+}
+
+.stat-item h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0;
+}
+.features-section {  
+  width: 100%;  
+  max-width: 100%;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  padding: 40px 60px;  
+  background-color: #fff;  
+}  
+
+.features-title {  
+  text-align: center;  
+  margin-bottom: 30px;  
+  width: 100%;  
+  max-width: 1200px; /* Tambahkan max-width */  
+}  
+
+.features-title h2 {  
+  font-size: 2.5rem;  
+  color: #000;  
+  margin-bottom: 10px;  
+  font-weight: bold;  
+  text-align: center;  
+}  
+
+.features-title p {  
+  font-size: 16px;  
+  color: #666;  
+  max-width: 800px;  
+  margin: 0 auto; /* Tambahkan ini untuk memusatkan */  
+  text-align: center;  
+  line-height: 1.6;  
+}  
+
+.features-container {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: flex-start;  
+  gap: 40px;  
+  width: 100%;  
+  max-width: 1200px; /* Tambahkan max-width */  
+  margin: 0 auto; /* Tambahkan ini untuk memusatkan */  
+}  
+
+.feature-item {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  text-align: center;  
+  flex: 1;  
+  max-width: 250px; /* Tambahkan batasan lebar */  
+}  
+
+.feature-icon-container {  
+  width: 90px;  
+  height: 90px;  
+  background-color: #000;  
+  border-radius: 20px;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  margin-bottom: 15px;  
+}  
+
+.feature-icon {  
+  width: 40px;  
+  height: 40px;  
+  color: #fff;  
+}  
+
+.feature-item h3 {  
+  font-size: 16px;  
+  color: #000;  
+  margin-bottom: 8px;  
+  font-weight: bold;  
+}  
+
+.feature-item p {  
+  font-size: 13px;  
+  text-align: center;  
+  color: #666;  
+  max-width: 250px;  
+  line-height: 1.5;  
+}     
+
+.about-us-section {  
+  width: 100%;  
+  background-color: #000;  
+  color: #fff;  
+  padding: 60px 60px;  
+  box-sizing: border-box;  
+}  
+
+.about-us-content {  
+  max-width: 800px;  
+  margin: 0 auto;  
+}  
+
+.about-us-subtitle {  
+  font-size: 14px;  
+  margin-bottom: 15px;  
+  text-align: left;  
+  color: #fff;  
+}  
+
+.about-us-content h1 {  
+  font-size: 2rem;  
+  text-align: left;  
+  margin-bottom: 15px;  
+  line-height: 1.2;  
+  color: #fff;  
+}  
+
+.about-us-paragraphs p {  
+  font-size: 12px;  
+  line-height: 1.6;  
+  margin-bottom: 15px;  
+  text-align: justify;  
+  color: #fff;  
+}  
+.trusted-universities-section {  
+  width: 100%;  
+  background-color: #fff;  
+  padding: 40px 60px;  
+  box-sizing: border-box;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+}  
+
+.trusted-universities-content {  
+  max-width: 1200px;  
+  width: 100%;  
+  text-align: center;  
+}  
+
+.trusted-universities-content h1 {  
+  font-size: 2rem;  
+  color: #000;  
+  margin-bottom: 15px;  
+  line-height: 1.4;  
+  text-align: center;  
+}  
+
+.trusted-universities-content p {  
+  font-size: 14px;  
+  color: #666;  
+  margin-bottom: 30px;  
+  max-width: 800px;  
+  margin-left: auto;  
+  margin-right: auto;  
+  text-align: center;  
+}  
+
+.universities-grid {  
+  display: grid;  
+  grid-template-columns: repeat(5, 1fr);  
+  gap: 20px;  
+  justify-content: center;  
+  align-items: center;  
+}  
+
+.university-logo {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}  
+
+.university-logo img {  
+  max-width: 56%; /* Dikurangi 30% dari sebelumnya (80%) */  
+  height: auto;  
+  transition: transform 0.3s ease;  
+}  
+
+.university-logo img:hover {  
+  transform: scale(1.1);  
+}  
+
+.testimonial-section {  
+  background-color: black;  
+  color: white;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  padding: 60px 20px;  
+  width: 100%;  
+}  
+
+.testimonial-section h3 {  
+  margin-bottom: 10px;  
+  color: white;  
+  font-size: 20px;  
+}  
+
+.testimonial-section h1 {  
+  font-size: 2.5em;  
+  font-weight: bold;  
+  color: white;  
+  margin-bottom: 40px;  
+  text-align: center;  
+}  
+
+.testimonial-content {  
+  background-color: white;  
+  color: black;  
+  padding: 30px;  
+  border-radius: 30px;  
+  max-width: 800px;  
+  width: 100%;  
+  text-align: center;  
+  margin-bottom: 30px;  
+}  
+
+.testimonial-text {  
+  font-size: 16px;  
+  color: #000000;  
+  line-height: 1.8;  
+}  
+
+.testimonial-author {  
+  margin-top: 35px;  
+}  
+
+.testimonial-author-name {  
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;  
+}  
+
+.testimonial-author-university {  
+  font-size: 12px;  
+  color: #000000;  
+}  
+
+.testimonial-indicators {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  gap: 10px;  
+}  
+
+.testimonial-indicator {  
+  width: 10px;  
+  height: 10px;  
+  border-radius: 50%;  
+  border: none;  
+  cursor: pointer;  
+}  
+
+.testimonial-indicator-active {  
+  background-color: white;  
+}  
+
+.testimonial-indicator-inactive {  
+  background-color: gray;  
+}  
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-main h1 {
+    font-size: 6em;
+    margin-top: 30px;
   }
 
+  .home-main h2 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
   
-  .logout-button:hover{
-    color: #333;
-    background-color: white;
+  .home-main p {
+    font-size: 13px;
+    max-width: 90%;
   }
+
+  .explore-button {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .statistics-container {
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 20%;
+    bottom: 20%;
+    width: 1px;
+    background-color: #fff;
+  }
+
+  .stat-item h2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .stat-item p {
+    font-size: 10px;
+    margin: 0;
+    color: #fff;
+  }
+ .features-section {  
+    padding: 40px 20px;  
+    text-align: center; /* Tambahkan ini */  
+  }  
+
+  .features-container {  
+    flex-direction: column;  
+    gap: 20px;  
+    align-items: center; /* Tambahkan ini */  
+  }  
+
+  .feature-item {  
+    width: 100%;  
+    max-width: 300px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center; /* Tambahkan ini */  
+  }  
+
+  .features-title h2 {    
+    font-size: 1.5em;
+    margin-top: -10px;  
+    text-align: center; /* Tambahkan ini */  
+  }  
+
+  .features-title p {  
+    font-size: 12px;  
+    text-align: center; /* Tambahkan ini */  
+  }  
+
+  .feature-icon-container {  
+    width: 60px;  
+    height: 60px;  
+    border-radius: 15px;  
+  }  
+
+  .feature-icon {  
+    width: 30px;  
+    height: 30px;  
+  }  
+
+  .feature-item h3 {  
+    font-size: 14px;  
+    text-align: center;  
+    margin-bottom: 8px; /* Tambahkan ini */  
+  }  
+
+  .feature-item p {  
+    font-size: 12px;  
+    text-align: center; /* Pastikan ini ada */  
+    max-width: 250px; /* Tambahkan ini untuk membatasi lebar teks */  
+  }  
+   .about-us-section {  
+    padding: 40px 20px;  
+  }  
+
+  .about-us-content h1 {  
+    font-size: 1.2rem !important;
+  }  
+
+  .about-us-subtitle {  
+    font-size: 12px;  
+  }  
+
+  .about-us-paragraphs p {  
+    font-size: 11px;  
+  }  
+  .trusted-universities-content h1 {  
+    font-size: 1rem !important; /* Lebih kecil dari sebelumnya */  
+    margin-bottom: 10px;  
+  }  
+
+  .trusted-universities-content p {  
+    font-size: 12px; /* Lebih kecil dari sebelumnya */  
+    max-width: 100%;  
+    margin: 0 auto 20px;  
+  }  
+  .testimonial-section {  
+    padding: 40px 15px;  
+  }  
+
+  .testimonial-section h1 {  
+    font-size: 20px;  
+  }  
+
+  .testimonial-content {  
+    border-radius: 50px;  
+    padding: 20 20px;  
+
+  }  
+  .testimonial-text {  
+  font-size: 12px;  
+  color: #000000;  
+  line-height: 1.8;  
+}  
+
+.testimonial-author {  
+  margin-top: 35px;  
+}  
+
+.testimonial-author-name {  
+  font-size: 15px;
+  color: #000000;
+  font-weight: bold;  
+}  
+}  
+}  
+@media (max-width: 1200px) {  
+  .universities-grid {  
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 15px;  
+  }  
+
+  .university-logo img {  
+    max-width: 56%;  
+  }  
+}  
+
+@media (max-width: 992px) {  
+  .universities-grid {  
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 15px;  
+  }  
+}  
+
+
+
+
+@media (max-width: 480px) {  
+  .universities-grid {  
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 10px;  
+  }  
+
+  .university-logo img {  
+    max-width: 60%;  
+  }  
+}  
+}  

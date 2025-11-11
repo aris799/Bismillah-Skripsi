@@ -1,0 +1,192 @@
+.guide-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-container {
+  flex-grow: 1;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.guide-header {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.guide-header p:first-child {
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.guide-header h1 {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.guide-header > p:last-child {
+  color: #000;
+  max-width: 100%;
+}
+
+.accordion-container {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.accordion-item {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-title-content {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.guide-header h1 {  
+  font-size: 20px;
+}  
+
+.guide-header > p:last-child {  
+  font-size: 15px;
+}  
+
+.guide-header > p:first-child {  
+  margin-top: 30px;
+  font-size: 15px;
+}  
+
+.accordion-title-content h3 {
+  color: #000;
+  font-size: 15px;
+  margin: 0 0 10px 0;
+}
+
+.accordion-title-content p {
+  color: #000;
+  font-size: 15px;
+  margin: 0;
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion-steps-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.accordion-steps-content ol {
+  padding-left: 20px;
+  font-size: 15px;
+  color: #000;
+}
+
+.accordion-steps-content li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.guide-accordion {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.guide-accordion .accordion-item {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.guide-accordion .accordion-steps-content p {
+  font-size: 15px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .guide-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .guide-header {
+    padding-left: 15px;
+  }
+
+  .guide-header h1 {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  .guide-header > p:first-child {
+    font-size: 12px;
+    margin-left: 10px;
+    text-align: justify;  
+  }
+  .guide-header > p:last-child {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .accordion-header {
+    padding: 10px 15px;
+  }
+
+  .accordion-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .accordion-title-content h3 {  
+    font-size: 15px;
+  }  
+
+  .accordion-title-content p {  
+    font-size: 12px;
+  }  
+
+  .accordion-steps-content ol {  
+    font-size: 12px;
+  }  
+
+  .accordion-steps-content li {  
+    font-size: 12px;
+  }   
+
+  .guide-accordion .accordion-title-content h3 {  
+    font-size: 15px;
+  }  
+
+  .guide-accordion .accordion-title-content p {  
+    font-size: 12px;
+  }  
+
+  .guide-accordion .accordion-steps-content p {  
+    font-size: 12px;
+  }  
+}

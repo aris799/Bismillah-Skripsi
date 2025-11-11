@@ -1,0 +1,306 @@
+.explore-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-column {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-column {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookmark-btn {
+  padding: 12px 20px;
+  background-color: #000;
+  border: 3px solid #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 200ms, color 200ms;
+}
+
+.bookmark-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+}
+
+.category-box {
+  background-color: transparent;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.category-btn {
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #000; /* Sekat antar kategori */
+  font-size: 14px;
+  color: #000;
+  transition: background 200ms;
+}
+
+.category-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #000;
+}
+
+.category-select,
+.year-select {
+  padding: 12px;
+  font-size: 14px;
+  width: 48%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #000;
+}
+
+.search-btn,
+.reset-btn {
+  padding: 12px 18px;
+  font-size: 14px;
+  width: 20%;
+  background-color: #000;
+  border: 3px solid #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 200ms, color 200ms;
+}
+
+.search-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+}
+
+.reset-btn:hover {
+  background-color: red;
+  color: #fff;
+  border: 3px solid red;
+}
+
+/* Results */
+.results-list {
+  margin-top: 20px;
+}
+
+.thesis-card {
+  background-color: transparent;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.thesis-title {
+  font-size: 20px;
+  font-weight: bold;
+  width: 80%;
+}
+
+.thesis-meta {
+  font-size: 15px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.thesis-meta .author,
+.thesis-meta .year {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.thesis-abstract {
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.bookmark-card-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bookmark-card-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.items-per-page {
+  display: flex;
+  gap: 10px;
+}
+
+.items-per-page select {
+  padding: 5px;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;  /* Menjaga tombol berada di tengah */
+  align-items: center;
+  gap: 10px;  /* Memberikan jarak antara tombol */
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 200ms, color 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px; /* Minimum width untuk tombol */
+}
+
+.pagination-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.pagination-btn:disabled {
+  background-color: #ccc;
+  color: #777;
+  cursor: not-allowed;
+  border: 2px solid #ccc;
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: #000;
+}
+    /* Responsiveness */
+@media (max-width: 768px) {
+  .explore-container {
+    flex-direction: column;
+  }
+
+  .right-column {
+    display: none; /* Hide right column on mobile */
+  }
+
+  .left-column {
+    width: 100%;
+  }
+
+  /* Mobile Bookmark Styling - Minimal Changes */
+  .mobile-bookmark-container {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .mobile-bookmark-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+
+  .mobile-bookmark-btn .bookmark-count {
+    margin-left: 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+
+  /* Minimal Typography Adjustments */
+  .thesis-title {
+    font-size: 15px;
+  }
+
+  .thesis-meta {
+    font-size: 12px;
+  }
+
+  .thesis-abstract {
+    font-size: 12px;
+  }
+
+  .category-btn {
+    font-size: 14px;
+  }
+}
+@media (min-width: 769px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+

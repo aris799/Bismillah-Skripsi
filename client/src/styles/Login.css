@@ -14,23 +14,18 @@
   }
   
   .login-left img{
-    width: 400px;
+    width: 450px;
   }
   
   .login-right{
-  
     height: 100vh;
-  
     flex-grow: 1;
-  
-  
   }
   
   .login-right-container{
     height: 100%;
     width: 80%;
     margin: 0 auto;
-  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +55,7 @@
   }
   
   .login-center{
-    text-align: center;
+    text-align: center;    
   }
   
   .login-center p{
@@ -106,7 +101,11 @@
     font-weight: 600;
   }
   
-  
+  .google-login-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
   .login-center-options{
     display: flex;
     justify-content: space-between;

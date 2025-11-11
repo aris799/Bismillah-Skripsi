@@ -1,0 +1,154 @@
+.bookmark-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.bookmark-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 25px;
+}
+
+.back-button-style {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button-style img {
+  width: 30px;
+  height: 30px;
+}
+
+.bookmark-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+.bookmark-content-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bookmarks-grid {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.no-bookmarks {
+  text-align: center;
+  color: #6c757d;
+}
+
+.bookmark-card {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.bookmark-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.thesis-title {
+  font-size: 20px;
+  font-weight: bold;
+  width: 80%;
+}
+
+.remove-bookmark-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.thesis-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.thesis-abstract {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination-btn {
+  padding: 8px 16px;
+  background-color: #000;
+  color: white;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .bookmark-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Posisi tengah untuk kontainer */
+    position: relative;
+    padding: 15px;
+  }
+
+  .back-button {
+    position: absolute; /* Kembalikan ke absolute */
+    left: 15px; /* Geser ke kiri dengan jarak 15px */
+    top: 50%; /* Posisikan di tengah vertikal */
+    transform: translateY(-50%); /* Sejajarkan vertikal */
+  }
+
+  .bookmark-title {
+    font-size: 20px;
+    margin-left: 15px;
+    text-align: center; /* Pastikan teks di tengah */
+  }
+
+  .thesis-title {
+    font-size: 15px;
+  }
+
+  .thesis-meta {
+    font-size: 12px;
+  }
+
+  .thesis-abstract {
+    font-size: 12px;
+  }
+}

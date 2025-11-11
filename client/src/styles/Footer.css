@@ -1,0 +1,40 @@
+.footer {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    font-size: 12px; /* Tambahkan ini untuk membuat teks lebih kecil */
+}
+
+.separator {
+    margin: 0 10px 0 10px;
+}
+
+.footer .footer-links {
+    display: flex;
+}
+
+.footer .footer-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px; /* Tambahkan ini untuk ukuran teks link */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px; /* Ukuran font lebih kecil di layar mobile */
+    }
+
+    .footer .footer-links {
+        margin-top: 5px;
+    }
+
+    .footer .footer-links a {
+        font-size: 10px; /* Ukuran link di mobile */
+    }
+}
